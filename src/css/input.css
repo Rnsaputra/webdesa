@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #FE2157;
+    --color-dark: #11192C;
+    --color-secondary: oklch(0.279 0.041 260.031);
+    
+    }
+
+@keyframes appear{
+    from   {
+        opacity :0;
+        scale   :0.5;
+
+    }
+    to {
+        opacity : 1;
+        scale : 1;
+    }
+
+    
+    
+
+}
+
+
+.blocke {
+    animation: appear linear;
+    animation-timeline : view();
+    animation-range : entry 0% cover 30%;
+}
+
+.bg-image{;
+    background-image: url("/src/img/1.png");
+}
+  
+
+.container{
+    padding : '16px';
+    margin : auto;
+}
+.effect{
+    filter:drop-shadow(5px 5px 10px oklch(0.279 0.041 260.031));
+}
+
+body{-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    
+}
+
+.navbar-fixed{
+    @apply fixed z-[99999] bg-white/50;
+    backdrop-filter: blur(5px);
+    box-shadow : inset 0 -1px 0 0 rgba(0,0,0,0.3);
+}
+
+
+.hamburger-line{
+    @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.hamburger-active > span:nth-child(1){
+    @apply origin-top-left rotate-45;
+}
+.hamburger-active > span:nth-child(3){
+    @apply origin-bottom-left -rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
